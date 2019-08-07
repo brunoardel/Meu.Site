@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Projeto Meu Site</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <meta name="keywords" content="palavras-chave, desenvolvimento, front-end, etc">
+  <meta name="keywords" content="O conteudo desta linha aparece nos resultados do Google">
+  <meta name="author" content="Bruno Ardel">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <div class="container">
+      <div class="logo"><a href="index.html">
+          <h2>Meu.Site</h2>
+        </a></div><!-- logo -->
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li class="selected"><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav><!-- menu desktop -->
+      <nav class="menu-mobile">
+        <h2><i class="fa fa-bars"></i></h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li class="selected"><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav><!-- menu-mobile -->
+      <div class="clear"></div>
+    </div><!-- container -->
+  </header><!-- header -->
+
+
+  <!-- Title-page -->
+
+  <section style="background-image:url('images/bg1.jpg');" class="title-page">
+    <div class="overlay__title-page"></div>
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Fusce vitae metus vehicula, volutpat lacus eget, molestie felis. Vivamus malesuada mauris in diam varius, sit
+        amet scelerisque nisl tincidunt. Proin et imperdiet nisi.</p>
+    </div>
+  </section><!-- title-page -->
+
+
+  <section class="contato">
+    <div class="container">
+      <div class="w60 formulario">
+        <h2>Entre em contato que estaremos respondendo o mais breve possivel!</h2>
+        <form method="post">
+          <div class="w50">
+            <input placeholder="Nome..." type="text" required>
+          </div>
+          <div class="w50">
+            <input placeholder="Sobrenome..." type="text" required>
+          </div>
+          <div class="w100">
+            <input placeholder="E-mail..." type="email" required>
+          </div>
+          <div class="w100">
+            <textarea placeholder="Sua mensagem..."></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="w40 tags-form">
+        <h2><i class="fa fa-comment"> Fale com a nossa equipe!</i></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <p class="tag-contato"><i class="fa fa-facebook"></i> /brunoardel</p>
+        <p class="tag-contato"><i class="fa fa-twitter"></i> /brunoardel</p>
+        <p class="tag-contato"><i class="fa fa-instagram"></i> /brunoardel</p>
+
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer1">
+    <div class="container">
+      <div class="w33">
+        <h2>Onde estamos?</h2>
+        <p><i class="fa fa-map-pin" aria-hidden="true"></i>Rua Fulano de Tal, 000, Jundiaí - SP</p>
+        <p><i class="fa fa-phone" aria-hidden="true"></i>(11) 99999-9999</p>
+      </div>
+      <div class="w33">
+        <h2>Links Úteis</h2>
+        <a href="https://brunoardel.github.io/">Portfólio</a>
+        <a href="https://www.linkedin.com/in/brunoardel/">LinkedIn</a>
+      </div>
+      <div class="w33">
+        <h2>Conecte-se conosco</h2>
+        <div class="group-icons">
+          <a href=""><i class="fa fa-facebook"></i></a>
+          <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </footer><!-- footer1 -->
+
+
+  <!-- Footer2 -->
+
+  <footer class="footer2">
+    <div class="container">
+      <p>Todos os direitos reservados</p>
+    </div>
+  </footer><!-- footer2 -->
+
+
+  <!-- Menu Mobile -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    $('nav.menu-mobile h2').click(function () {
+      $('nav.menu-mobile ul').slideToggle();
+    });
+  </script><!-- Menu Mobile -->
+
+</body>
+
+</html>

@@ -1,0 +1,790 @@
+* {
+	margin: 0;  /* retira a margem entre o top e o elemento */
+	padding: 0; /* preenchimento, espaço entre os elementos interiores e o elemento */
+	box-sizing: border-box; /* não faz o elemento crescer, não soma margin e padding no tamanho dos elementos */
+	font-family: "Open Sans", sans-serif; /* especifica fonte */
+}
+
+
+/* Classes Auxiliares */
+
+.clear {
+  clear: both;  /* faz os elementos filhos voltarem a fazer parte do elemento pai apos usar float */
+}
+
+.container {
+	max-width: 1280px;  /* largura maxima do container */
+	margin: 0 auto; /* retira margens e centraliza horizontalmente o elemento na tela */
+  padding: 0 2%;  /* cima e baixo com 0, esquerda e direita com 2% */
+}
+
+.center {
+  text-align: center;
+}
+
+.w100 {
+  width: 100%;
+  float: left;
+}
+
+.w60 {
+  width: 60%;
+  float: left;
+}
+
+.w50 {
+  width: 50%;
+  float: left;
+}
+
+.w40 {
+  width: 40%;
+  float: left;
+}
+
+.w33 {
+  width: 33.3%;
+  float: left;
+}
+
+
+/* Header */
+
+header {
+	padding: 8px 0; /* cima e baixo com 8px, esquerda e direita com 0 */
+}
+
+.logo {
+  float: left;  /* logo flutuando para esquerda */
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo h2 {
+  font-weight: normal;  /* peso da fonte */ 
+  font-size: 25px;  /* tamanho da fonte */
+}
+
+nav.menu-desktop {
+  float: right; /* flutuando para direita */ 
+}
+
+nav.menu-desktop li.selected {
+	font-weight: normal;  /* peso da fonte */
+	text-decoration: underline;  /* coloca underline no elemento com a classe: selected */
+}
+
+nav.menu-desktop ul { /* lista */
+  position: relative; /* abre a possibilidade do uso de Top, Bottom, Left e Right do elemento */
+  top: 8px;
+}
+
+nav.menu-desktop li {
+  padding: 0 10px;  /* 0 cima e baixo, 10px esquerda e direita */
+  font-weight: lighter; /* peso da fonte */
+  display: inline-block;  /* para todos os elementos da lista ficarem na mesma linha, tambem retira os marcadores */
+}
+
+nav.menu-desktop a {
+  color: black; /* cor da fonte */
+  text-decoration: none;  /* retira underline dos elementos */
+  font-size: 15px;
+}
+
+nav.menu-desktop a:hover {
+  text-decoration: underline; /* quando coloca o mouse em cima poem underline nos links */
+}
+
+nav.menu-mobile {
+  display: none; /* faz o menu mobile não aparecer por padrão */
+  float: right;
+} 
+
+nav.menu-mobile h2 {
+  cursor: pointer;
+}
+
+nav.menu-mobile ul {
+  display: none;
+  width: 100%;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 999;
+  text-align: center;
+}
+
+nav.menu-mobile li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+nav.menu-mobile li.selected{
+  background: rgb(225, 225, 225);
+}
+
+nav.menu-mobile a{
+  display: block; /* para deixar toda a li clickavel */
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Sessão Main - main-bg */
+
+section.main-bg {
+  width: 100%;  /* largura */
+  padding: 140px 0 200px 0; /* altura 50px, direita 0, baixo 80px, 0 esquerda */
+  background: url(../images/bg1.jpg); /* link da imagem do plano de fundo */
+  background-repeat: no-repeat; /* faz o background não se repetir */
+  background-size: cover; /* faz a imagem se ajustar no tamanho do elemento */
+  background-position: center;  /* centraliza do background */
+  font-weight: normal;  /* peso da fonte */
+  position: relative; /* abre a possibilidade do uso de Top, Bottom, Left e Right do elemento */
+  text-align: center;
+}
+
+.overlay {  /* sobreposição, foi usado para dar uma aparencia mais escura ao background */
+  z-index: 2;
+  position: absolute; /* usado para usar a mesma posição do elemento pai, container */
+  width: 100%;  /* largura */
+  height: 100%; /* peso */
+  background: rgba(0, 0, 0, 0.5); /* cor de fundo do overlay */
+  left: 0; /* usado para fazer o overlay se encaixar no espaço do container */
+  top: 0; /* usado para fazer o overlay se encaixar no espaço do container */
+}
+
+section.main-bg > .container {
+  position: relative; /* abre a possibilidade do uso de Top, Bottom, Left e Right do elemento */
+  z-index: 2;
+}
+
+section.main-bg h2 {
+  text-align: center; /* alinhamento do texto no centro */
+  color: #52aaa7; /* cor da fonte */
+  font-size: 35px;  /* tamanho da fonte */
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+section.main-bg p {
+  text-align: left; /* alinhamento do texto a esquerda */
+  color: white; /* cor da fonte */
+  font-size: 17px;  /* tamanho da fonte */
+  margin-top: 15px; /* tamanho da margem de cima */
+}
+
+
+/*  Section Diferenciais - Experiência do usuário  */
+
+section.diferenciais {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.line-text {
+  position: relative;
+  display: inline-block;
+}
+
+.line-text div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 3px;
+  background: #52aaa7;
+}
+
+.line-text h2 {
+/*   display: inline-block; */
+  font-weight: normal;
+  font-size: 25px;
+  color: #52aaa7;
+}
+
+.icones-diferenciais {
+  padding: 35px;
+/*   margin-top: 35px; */
+}
+
+.box-icone-single {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.box-icone-single h2 {
+  color: #8a6b62;
+  font-size: 80px;
+}
+
+.box-icone-single p {
+  color: #646464;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+
+/* Equipe e Sobre */
+
+section.sobre-equipe{
+  padding: 30px 0;
+  background: rgb(225, 225, 225)
+}
+
+section.sobre-equipe > .container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.equipe-container{
+  width: 50%;
+}
+
+/* line-text pega as classes lá de Section Diferenciais - Experiência do usuário */
+
+.avatar-box { /* É a caixa toda (div) contendo imagem e os 2 textos */
+ 
+  /* Para colocar o avatar-box e img-avatar na mesma linha o Guilherme colocou uma div colada na outra (na mesma linha), como eu estou usando algum plugin que identa o código toda vez que salvava o plugin separava as divs em linhas diferentes. A solução pra isso foi colocar img-avatar com a propriedade float:left e o avatar-box com float: right */
+ 
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.img-avatar { /* div com a imagem */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: 100% 100%;
+  background-color: gray;
+  float: left;
+}
+
+.descricao-avatar { /* Os 2 textos */
+  padding: 0 10px;
+  width: calc(100% - 70px);
+  float: right;
+}
+
+.descricao-avatar h3 {
+  color: rgb(30, 30, 30);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.descricao-avatar p {
+  color: rgb(30, 30, 30);
+  font-weight: lighter;
+}
+
+.sobre-container {
+width: 50%;
+}
+
+.sobre-container p{
+  color: black;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+section.sobre-equipe .container{
+  margin-bottom: 15px;
+}
+
+/* Section Inscrição */
+
+section.inscricao {
+  background: #52aaa7;
+  padding: 20px 0;
+}
+
+h2.inscricao-texto {
+  font-weight: normal;
+  color: white;
+}
+
+.inscricao i{
+  margin: 10px;
+}
+
+.inscricao-form input[type=text] {
+  width: calc(100% - 120px);
+  height: 40px;
+  background: white;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.inscricao-form input[type=submit] {
+  width: 120px;
+  height: 40px;
+  background: #1d6c64;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  color: white;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+
+/* Section Cards */
+
+section.cards {
+  padding: 30px 0;
+}
+
+.card-single {
+  width: 33.3%;
+  float: left;
+  padding: 0 50px;
+}
+
+.card-single img {
+  width: 100%;
+}
+
+.card-single h3 {
+  margin-top: 5px;
+  font-weight: normal;
+  font-size: 19px;
+}
+
+.card-single p {
+  margin: 10px 0;
+  font-weight: lighter;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+
+}
+
+
+/* Footer */
+
+footer.footer1 {
+  background: #52aaa7;
+  padding: 20px 0;
+  color: white;
+}
+
+footer.footer1 h2 {
+  font-weight: normal;
+  font-size: 23px;
+}
+
+footer.footer1 p {
+  margin-top: 8px;
+  font-weight: lighter;
+}
+
+footer.footer1 i{
+  margin-right: 10px;
+}
+
+footer.footer1 a {
+  display: block;
+  color: white;
+}
+
+div.group-icons a {
+  display: inline-block;
+  margin: 15px 10px;
+  font-size: 25px;
+}
+
+
+/* Footer2 */
+
+footer.footer2 {
+  padding: 20px 0;
+  background: #1d6c64;
+  text-align: center;
+  color: white;
+}
+
+
+/* Pagina SOBRE */
+
+/* Title-page */
+
+section.title-page{
+  padding: 30px;
+  width: 100%;
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay__title-page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0,0,0,0.4);
+}
+
+section.title-page > .container{
+  position: relative;
+  z-index: 101;
+}
+
+section.title-page h2{
+  color: #44d4c5;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+section.title-page p{
+  color: white;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+
+/* Sobre__noticia - title-page */
+
+section.sobre__noticia {
+  padding: 30px 0;
+}
+
+.sobre__noticia__single img{
+  max-width: 100%;
+  float: left;
+  width: 50%;
+}
+
+.sobre__noticia__single p{
+  font-size: 16px;
+  font-weight: lighter;
+  padding: 5px 10px;
+  float: left;
+  width: 50%;
+  text-indent: 1.5em;
+}
+
+
+/* Paralax */
+
+section.paralax{
+  padding: 30px 0;
+  width: 100%;
+  min-height: 200px;
+  background-image: url('../images/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+section.paralax h2{
+  border: 1px solid #44d4c5;
+  padding: 5px 25px;
+  color: #44d4c5;
+  font-size: 18px;
+  display: inline-block;
+}
+
+section.paralax p{
+  margin-top: 10px;
+  color: white;
+}
+
+
+/* Equipe */
+    
+section.equipe{
+  padding: 40px 0;
+}
+
+.equipe-circles{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.equipe-circle-single{
+  text-align: center;
+  padding: 0 20px;
+  width: 33.3%;
+}
+
+.avatar-single{
+  position: relative;
+  width: 60%;
+  padding-top: 60%;
+  margin: 0 auto;
+}
+
+.avatar-single-container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #ccc;
+  background-size: 100% 100%;
+}
+
+.equipe-circle-single h3{
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.equipe-circle-single p{
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+
+/* Sobre__final, Imagem do dia, Nossa história */
+
+section.sobre__final{
+  background-color: rgb(225,225,225);
+  border-top: 2px solid rgb(210,210,210);
+  padding: 20px 0;  
+}
+
+.card-text{
+  position: relative;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.card-text h3{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.card-text img{
+  max-width: 100%;
+}
+
+section.sobre__final p{
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+
+/* PAGINA 3 CONTATO */ 
+
+/* Contato */
+
+section.contato {
+    padding: 30px 0;
+    min-height: 600px;
+}
+
+section.contato .w50,
+section.contato .w100{
+    padding: 0 10px;
+}
+
+.formulario form{
+    margin-top: 10px;
+}
+
+.formulario h2{
+    background: #DDDDDD;
+    color: #ACAC9d;
+    font-size: 15px;
+    padding: 6px 0;
+    text-align: center;
+    font-weight: bolder;
+    border-left: 5px solid #ccc;
+}
+
+.formulario input[type=text],
+.formulario input[type=email]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+.formulario textarea{
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.tags-form{
+    padding-left: 50px;
+}
+
+.tags-form h2{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.tags-form p{
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.tags-form p.tag-contato{
+    color: white;
+    background: #249b8f;
+    text-align: center;
+    padding: 6px 2px;
+    border-radius: 4px;
+}
+
+
+/* Contato */
+
+section.contato{
+  padding: 30px 0;
+}
+
+.formulario h2{
+  background: #DDDDDD;
+  text-align: center;
+  color: #ACAC9d;
+  font-size: 17px;
+  font-weight: normal;
+  border-left: 5px solid #CCCCCC;
+  padding: 4px 0;
+}
+
+section.contato .w50{
+  padding-right: 10px; 
+}
+
+.formulario input[type=text],
+.formulario input[type=email]{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding-left: 8px;
+}
+
+.formulario textarea{
+  width: 100%;
+  height: 120px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 10px;
+  resize: vertical;
+}
+
+
+/* Media */
+
+@media screen and (max-width: 1280px){
+    section.contato{
+        min-height: 0px;
+}
+
+@media screen and (max-width: 768px){
+    
+    .tags-form{padding-left: 0;}
+    .formulario input[type=text],
+    .formulario input[type=email]{
+  
+        margin-bottom: 0;
+    
+    }
+
+    .formulario textarea{
+    
+        margin-bottom: 0;
+
+    }
+    .w33,.w40,.w50,.w60,.w100{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    nav.menu-mobile{
+        display: block;
+    }
+    
+    nav.menu-desktop{
+        display: none;
+    }
+    
+    .box-icone-single{
+        width: 100%;
+    }
+    
+    .equipe-container{
+        width: 100%;
+    }
+    
+    .sobre-container{
+        width: 100%;
+        margin-top: 60px;
+    }
+    
+    .card-single{
+        width: 100%;
+    }
+    
+    .equipe-circle-single{
+        margin-bottom: 15px;
+    }
+    
+    .card-text{
+        width: 100%;
+    }
+
+    .sobre__noticia__single img{
+      width: 100%;
+    }
+
+    .sobre__noticia__single p{
+      margin-top: 8px;
+      width: 100%;
+      padding: 0;
+    }
+
+    footer.footer1 {
+      text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+  .card-text{
+    width: 100%;
+  }
+
+  .equipe-circle-single{
+  padding: 0 8px;
+  width: 100%;
+  margin-bottom: 30px;
+  }
+
+  nav.menu-desktop{display: none;}
+  nav.menus-mobile{display: block;}
+
+  .card-single{
+    padding: 10px;
+  }
+}
+
+}
